@@ -42,6 +42,12 @@
 .app-container .app-header .app-burger-menu__btn .close-icon {
     display: none;
 }
+.app-container .app-header .app-burger-menu__btn.active .close-icon {
+    display: block;
+}
+.app-container .app-header .app-burger-menu__btn.active .menu-icon {
+    display: none;
+}
 .app-container .app-header .app-burger-menu__btn svg {
     width: 16px;
     height: 16px;
@@ -466,4 +472,55 @@
 .popup-item .popup-body .okay-btn:hover {
     transition: all 0.3s;
     background: #dadada;
+}
+
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 125px);
+    background: #ebebeb;
+    height: 100%;
+    box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transform: translateX(100%);
+    -webkit-transition: all .3s cubic-bezier(1,0,0,1);
+    transition: all .3s cubic-bezier(1,0,0,1);
+    -moz-transition: all .3s cubic-bezier(1,0,0,1);
+    -ms-transition: all .3s cubic-bezier(1,0,0,1);
+    -o-transition: all .3s cubic-bezier(1,0,0,1);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+.fullscreen-menu.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transition: all .3s cubic-bezier(1,0,0,1);
+    transition: all .3s cubic-bezier(1,0,0,1);
+    -moz-transition: all .3s cubic-bezier(1,0,0,1);
+    -ms-transition: all .3s cubic-bezier(1,0,0,1);
+    -o-transition: all .3s cubic-bezier(1,0,0,1);
+}
+.fullscreen-menu .nav-menu {
+    position: relative;
+    margin-top: 25px;
+}
+.fullscreen-menu .nav-menu ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 0;
+}
+.fullscreen-menu .nav-menu ul li {
+    margin-bottom: 25px;
+}
+.fullscreen-menu .nav-menu ul li a {
+    text-decoration: none;
+    font-family: "gotham-med";
+    font-size: 16px;
+    color: #000;
 }
